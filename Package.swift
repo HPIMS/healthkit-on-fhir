@@ -20,8 +20,11 @@ let package = Package(
     dependencies: [
         .package(name: "FHIR", url: "https://github.com/smart-on-fhir/Swift-FHIR", from: "4.2.0"),
         .package(name: "IomtFhirClient", url: "https://github.com/microsoft/iomt-fhir-client", from: "1.0.0"),
-        .package(name: "HealthDataSync", url: "https://github.com/microsoft/health-data-sync", from: "1.0.0"),
-        .package(name: "HealthKitToFhir", url: "https://github.com/microsoft/healthkit-to-fhir", from: "1.0.2"),
+        .package(name: "HealthKitToFhir", path: "../healthkit-to-fhir"),
+        .package(name: "HealthDataSync", path: "../health-data-sync")
+//        .package(name: "HealthDataSync", url: "https://github.com/microsoft/health-data-sync", from: "1.0.0"),
+//        .package(name: "HealthKitToFhir", url: "https://github.com/microsoft/healthkit-to-fhir", from: "1.0.2"),
+       
     ],
     targets: [
         .target(
